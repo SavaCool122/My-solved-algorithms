@@ -35,5 +35,3 @@ function dividedBy(x) {
     return Math.floor(y / x)
   }
 }
-
-console.log(one(times(two())))
