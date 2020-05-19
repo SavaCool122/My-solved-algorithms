@@ -1,38 +1,19 @@
-function expression(number, operation) {
-  if (!operation) return number
-  return operation(number)
+function expression(number) {
+  return function (op) {
+    return op ? op(number) : number
+  }
 }
 
-function zero(operation) {
-  return expression(0, operation)
-}
-function one(operation) {
-  return expression(1, operation)
-}
-function two(operation) {
-  return expression(2, operation)
-}
-function three(operation) {
-  return expression(3, operation)
-}
-function four(operation) {
-  return expression(4, operation)
-}
-function five(operation) {
-  return expression(5, operation)
-}
-function six(operation) {
-  return expression(6, operation)
-}
-function seven(operation) {
-  return expression(7, operation)
-}
-function eight(operation) {
-  return expression(8, operation)
-}
-function nine(operation) {
-  return expression(9, operation)
-}
+const zero = expression(0)
+const one = expression(1)
+const two = expression(2)
+const three = expression(3)
+const four = expression(4)
+const five = expression(5)
+const six = expression(6)
+const seven = expression(7)
+const eight = expression(8)
+const nine = expression(9)
 
 function plus(x) {
   return function (y) {
@@ -54,3 +35,5 @@ function dividedBy(x) {
     return Math.floor(y / x)
   }
 }
+
+console.log(one(times(two())))
