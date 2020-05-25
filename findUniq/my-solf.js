@@ -112,3 +112,4 @@ function findUniq1(nums) {
 }
 
 console.log(findUniq(test))
+moveZerossas
