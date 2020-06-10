@@ -28,7 +28,7 @@ const findUniq = (arr) => {
   let uniqItem = sortedArr[0] == sortedArr[1] ? sortedArr.pop() : sortedArr[0]
   for (let i = 0; i < arr.length; i++) {
     if (
-      uniqItem ==
+      uniqItem ===
       [
         ...new Set(
           arr[i]
